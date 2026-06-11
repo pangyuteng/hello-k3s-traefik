@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpbin-deployment
+  name: httpbin
   namespace: httpbin
 spec:
   replicas: 2

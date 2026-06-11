@@ -23,4 +23,8 @@ move&rename k3s.yaml to "/home/$USER/.kube/config"
     + following https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/deployment-guides/kubernetes/
 
 kubectl create namespace httpbin
-kubectl create -f httpbin.yaml -f httpbinsvc.yaml
+kubectl create -f httpbin*.yaml
+kubectl apply -f httpbin*.yaml
+
+
++ # https://dev.to/sklarsa/k3s-traefik-ingress-configured-for-your-homelab-58lc

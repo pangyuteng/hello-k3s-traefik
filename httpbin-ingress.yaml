@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: web
+  namespace: httpbin
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: HostSNI(`*`)
+      services:
+        - name: httpbin
+          port: 8080
