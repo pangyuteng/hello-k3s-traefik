@@ -1,0 +1,26 @@
+
+
++ setup ha k3s woith etcd
+
+openssl rand -base64 24
+
+export K3S_TOKEN=
+curl -sfL https://get.k3s.io | sh -s - server --cluster-init
+
+export INITSERVERIP=
+curl -sfL https://get.k3s.io | sh -s - server --server https://$INITSERVERIP:6443
+curl -sfL https://get.k3s.io | sh -s - agent --server https://$INITSERVERIP:6443
+
+in developer machine, install "kubectl"
+
+cp /etc/rancher/k3s/k3s.yaml 
+out, chown as user,
+update ip to be one of the server IP
+move&rename k3s.yaml to "/home/$USER/.kube/config"
+
++ deploy httpbin 
+
+    + following https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/deployment-guides/kubernetes/
+
+kubectl create namespace httpbin
+kubectl create -f httpbin.yaml -f httpbinsvc.yaml
