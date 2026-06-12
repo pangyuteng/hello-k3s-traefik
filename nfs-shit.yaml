@@ -42,11 +42,11 @@ metadata:
     app: nfs-data
 spec:
   capacity:
-    storage: 1Gi
+    storage: 1Mi
   accessModes:
     - ReadWriteMany
   nfs:
-    server: "nfs-service.storage.svc.cluster.local"
+    server: "nfs-service.httpbin.svc.cluster.local"
     path: "/pvc" # "pvc" folder must exist in "/exports" directory of NFS server
 ---
 apiVersion: apps/v1
