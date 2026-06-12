@@ -5,8 +5,8 @@ metadata:
   namespace: httpbin
 spec:
   containers:
-  - name: busybox
-    image: busybox
+  - name: ubuntu
+    image: ubuntu:22:04
     command:
     - sleep
     - "3600"
