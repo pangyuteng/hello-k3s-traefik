@@ -1,0 +1,2 @@
+FROM kennethreitz/httpbin:latest
+RUN apt update && apt install -yq nfs-common
