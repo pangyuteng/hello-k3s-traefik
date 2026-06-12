@@ -16,6 +16,7 @@ spec:
       containers:
         - name: httpbin
           image: kennethreitz/httpbin:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
+          #imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80

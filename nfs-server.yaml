@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nfs-default
+  namespace: httpbin
+spec:
+  selector:
+    matchLabels:
+      role: nfs-server
+  template:
+    metadata:
+      labels:
+        role: nfs-server
+    spec:
+      #hostname: abc
+      containers:
+      - name: nfs-server
+        image: gists/nfs-server:2.6.4
+        imagePullPolicy: Always
+        ports:
+        - name: nfs
+          containerPort: 2049
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: storage
+          mountPath: /nfs-share
+      volumes:
+      - name: storage
+        hostPath:
+          path: /mnt
+          type: DirectoryOrCreate # if the directory does not exist then create it
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nfs-server
+  namespace: httpbin
+spec:
+  ports:
+  - name: nfs
+    port: 2049
+  selector:
+    role: nfs-server

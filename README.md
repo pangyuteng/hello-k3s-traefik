@@ -39,3 +39,8 @@ https://dev.to/sklarsa/k3s-traefik-ingress-configured-for-your-homelab-58lc
 
 https://kubernetes.io/docs/concepts/services-networking/ingress/
 
+
+
+easy bad mount
+https://github.com/vgist/dockerfiles/tree/master/nfs-server
+https://hub.docker.com/r/gists/nfs-server
