@@ -66,3 +66,5 @@ https://github.com/alphayax/docker-volume-nfs/blob/master/example/nfs-server.yam
 
 kubectl get pods -n httpbin
 kubectl describe pods nfs-pod-pvc -n httpbin
+
+kubectl exec -it nfs-pod-pvc -n httpbin -- bash
