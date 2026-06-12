@@ -9,7 +9,7 @@ spec:
     image: ubuntu:22:04
     command:
     - sleep
-    - "3600"
+    - "36000"
     volumeMounts:
     - name: data
       mountPath: /demo/data
