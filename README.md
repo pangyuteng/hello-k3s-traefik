@@ -26,5 +26,16 @@ kubectl create namespace httpbin
 kubectl create -f httpbin*.yaml
 kubectl apply -f httpbin*.yaml
 
+``
 
-+ # https://dev.to/sklarsa/k3s-traefik-ingress-configured-for-your-homelab-58lc
+https://www.jeffgeerling.com/blog/2022/quick-hello-world-http-deployment-testing-k3s-and-traefik/
+
+https://dev.to/sklarsa/k3s-traefik-ingress-configured-for-your-homelab-58lc
+
+```
+
+
+"An Ingress does not expose arbitrary ports or protocols. Exposing services other than HTTP and HTTPS to the internet typically uses a service of type Service.Type=NodePort or Service.Type=LoadBalancer."
+
+https://kubernetes.io/docs/concepts/services-networking/ingress/
+
