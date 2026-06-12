@@ -13,7 +13,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: "nfs-service.httpbin.svc.cluster.local"
-    path: "/exports" # "pvc" folder must exist in "/exports" directory of NFS server
+    path: "/exports"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

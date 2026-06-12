@@ -65,6 +65,10 @@ https://github.com/AdnanHodzic/nfs-server-k8s
 https://github.com/alphayax/docker-volume-nfs/blob/master/example/nfs-server.yaml
 
 kubectl get pods -n httpbin
+
 kubectl describe pods nfs-pod-pvc -n httpbin
 
 kubectl exec -it nfs-pod-pvc -n httpbin -- bash
+
+mkdir ok
+mount -t nfs nfs-service.httpbin.svc.cluster.local:/pvc ok
