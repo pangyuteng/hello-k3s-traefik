@@ -58,3 +58,8 @@ https://gist.github.com/pangyuteng/e7286fd461aad1c59cea69ce5558a63e
 
 # found it - OG kube nfs service pv pvc example by google
 https://github.com/kubernetes/examples/tree/d6b8cd27eacb51e651a1aa6f7c190a28713eff6e/_archived/volumes/nfs
+
+
+# copy cats materials
+https://github.com/AdnanHodzic/nfs-server-k8s
+https://github.com/alphayax/docker-volume-nfs/blob/master/example/nfs-server.yaml
