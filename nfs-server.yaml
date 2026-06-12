@@ -15,11 +15,13 @@ spec:
       #hostname: abc
       containers:
       - name: nfs-server
-        image: gists/nfs-server:2.6.4
+        image: itsthenetwork/nfs-server-alpine:latest
         imagePullPolicy: Always
         ports:
         - name: nfs
           containerPort: 2049
+        - name: udp
+          containerPort: 111
         securityContext:
           privileged: true
         volumeMounts:
@@ -40,5 +42,7 @@ spec:
   ports:
   - name: nfs
     port: 2049
+  - name: udp
+    port: 111
   selector:
     role: nfs-server
