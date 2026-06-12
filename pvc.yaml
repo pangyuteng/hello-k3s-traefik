@@ -13,7 +13,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: "nfs-service.httpbin.svc.cluster.local"
-    path: "/exports"
+    path: "/"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -26,7 +26,7 @@ spec:
   storageClassName: ""
   resources:
     requests:
-      storage: 10Mi
+      storage: 100Mi
   selector:
     matchLabels:
       app: nfs-data
