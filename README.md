@@ -41,6 +41,10 @@ https://kubernetes.io/docs/concepts/services-networking/ingress/
 
 
 
-easy bad mount
+
+easy bad nfs mount
+
+** WIP not wokring  **
+
 https://github.com/vgist/dockerfiles/tree/master/nfs-server
 https://hub.docker.com/r/gists/nfs-server
