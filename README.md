@@ -63,3 +63,6 @@ https://github.com/kubernetes/examples/tree/d6b8cd27eacb51e651a1aa6f7c190a28713e
 # copy cats materials
 https://github.com/AdnanHodzic/nfs-server-k8s
 https://github.com/alphayax/docker-volume-nfs/blob/master/example/nfs-server.yaml
+
+kubectl get pods -n httpbin
+kubectl describe pods nfs-pod-pvc -n httpbin
