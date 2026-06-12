@@ -31,7 +31,7 @@ spec:
       volumes:
       - name: storage
         hostPath:
-          path: /data/nfs # store all data in "/data/nfs" directory of the node where it is running
+          path: /mnt # store all data in "/data/nfs" directory of the node where it is running
           type: DirectoryOrCreate # if the directroy does not exist then create it
 ---
 apiVersion: v1

@@ -70,5 +70,6 @@ kubectl describe pods nfs-pod-pvc -n httpbin
 
 kubectl exec -it nfs-pod-pvc -n httpbin -- bash
 
+apt update && apt install nfs-common -yq
 mkdir ok
-mount -t nfs nfs-service.httpbin.svc.cluster.local:/pvc ok
+mount -t nfs nfs-service.httpbin.svc.cluster.local:/exports ok
