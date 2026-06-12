@@ -48,3 +48,5 @@ easy bad nfs mount
 
 https://github.com/vgist/dockerfiles/tree/master/nfs-server
 https://hub.docker.com/r/gists/nfs-server
+
+https://github.com/kubernetes-csi/csi-driver-nfs/tree/master/deploy/example/nfs-provisioner
