@@ -65,7 +65,7 @@ spec:
     spec:
       containers:
       - name: nfs-server
-        image: docker.io/adnanhodzic/nfs-server-k8s
+        image: docker.io/adnanhodzic/nfs-server-k8s:latest
         ports:
         - name: nfs
           containerPort: 2049
