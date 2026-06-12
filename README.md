@@ -50,3 +50,11 @@ https://github.com/vgist/dockerfiles/tree/master/nfs-server
 https://hub.docker.com/r/gists/nfs-server
 
 https://github.com/kubernetes-csi/csi-driver-nfs/tree/master/deploy/example/nfs-provisioner
+
+https://gist.github.com/pangyuteng/e7286fd461aad1c59cea69ce5558a63e
+
+
+
+
+# found it - OG kube nfs service pv pvc example by google
+https://github.com/kubernetes/examples/tree/d6b8cd27eacb51e651a1aa6f7c190a28713eff6e/_archived/volumes/nfs
