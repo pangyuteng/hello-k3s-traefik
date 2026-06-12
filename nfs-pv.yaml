@@ -10,6 +10,6 @@ spec:
     - ReadWriteMany
   nfs:
     server: nfs-server.httpbin.svc.cluster.local
-    path: "//nfs-share"
+    path: "/nfs-share"
   mountOptions:
     - nfsvers=4
