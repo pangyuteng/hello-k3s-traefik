@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mounttest
+  namespace: httpbin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mounttest
+  template:
+    metadata:
+      labels:
+        app: mounttest
+    spec:
+      containers:
+        - name: httpbin
+          image: kennethreitz/httpbin:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: myshare
+              mountPath: /myshare
+      volumes:
+        - name: myshare
+          persistentVolumeClaim:
+            claimName: nfs
