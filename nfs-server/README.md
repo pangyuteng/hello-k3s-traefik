@@ -1,6 +1,22 @@
 
+## *** you have to install NFS CSI driver if you want nfs mounts !!! ***
+
 https://github.com/kubernetes-csi/csi-driver-nfs/blob/master/deploy/example/nfs-provisioner/README.md
 
+
+kubectl create -f https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/deploy/example/nfs-provisioner/nfs-server.yaml
+
+curl -skSL https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/v4.13.2/deploy/install-driver.sh | bash -s v4.13.2 --
+
+kubectl -n kube-system get pod -o wide -l app=csi-nfs-controller
+kubectl -n kube-system get pod -o wide -l app=csi-nfs-node
+
+kubectl create -f https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/deploy/example/nfs-provisioner/nginx-pod.yaml
+
+
+--
+
+# OLD
 
 https://github.com/sjiveson/nfs-server-alpine
 
@@ -22,7 +38,7 @@ og source https://github.com/kubernetes/examples/tree/d6b8cd27eacb51e651a1aa6f7c
 
 --- 
 
-# OLD
+# OLD OLD
 
 easy bad nfs mount
 
