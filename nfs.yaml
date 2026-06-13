@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nfs-server
-        image: erichough/nfs-server:2.2.1
+        image: itsthenetwork/nfs-server-alpine:12
         imagePullPolicy: Always
         ports:
         - name: nfs
@@ -27,8 +27,8 @@ spec:
         securityContext:
           privileged: true
         env:
-        - name:  NFS_EXPORT_1
-          value: '/exports  *(rw,sync,no_subtree_check,fsid=100)'
+        - name: SHARED_DIRECTORY
+          value: /exports
         volumeMounts:
         - name: storage
           mountPath: /exports

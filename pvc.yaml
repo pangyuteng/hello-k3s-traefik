@@ -16,7 +16,7 @@ spec:
     - nfsvers=4.2
   nfs:
     #server: "nfs-service.httpbin.svc.cluster.local"
-    server: 10.43.148.134
+    server: 10.43.73.14
     path: "/exports"
 ---
 apiVersion: v1

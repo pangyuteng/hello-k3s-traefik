@@ -1,8 +1,19 @@
 
 
+https://github.com/sjiveson/nfs-server-alpine
+
+https://hub.docker.com/r/itsthenetwork/nfs-server-alpine/
+
+https://hub.docker.com/r/sharedvolume/nfs-server
+
+
+https://grok.com/share/bGVnYWN5_0552f0dc-ea5d-4727-8ff8-e08fd0611e28
+
+https://github.com/normal-computing/docker-nfs-server
 
 source https://github.com/ehough/docker-nfs-server
 
+https://github.com/ehough/docker-nfs-server/issues/72
 
 og source https://github.com/kubernetes/examples/tree/d6b8cd27eacb51e651a1aa6f7c190a28713eff6e/_archived/volumes/nfs/nfs-data
 
