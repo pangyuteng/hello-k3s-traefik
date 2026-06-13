@@ -72,4 +72,6 @@ kubectl exec -it nfs-pod-pvc -n httpbin -- bash
 
 apt update && apt install nfs-common -yq
 mkdir ok
-mount -t nfs nfs-service.httpbin.svc.cluster.local:/exports ok
+mount -t nfs nfs-service.httpbin.svc.cluster.local:/ ok
+
+mount -v -t nfs -o port=2049,vers=4 nfs-service.httpbin.svc.cluster.local:/ ok
