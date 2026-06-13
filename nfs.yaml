@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: nfs-server
-        image: docker.io/adnanhodzic/nfs-server-k8s:latest
+        image: erichough/nfs-server:2.2.1
+        imagePullPolicy: Always
         ports:
         - name: nfs
           containerPort: 2049
@@ -25,14 +26,17 @@ spec:
           containerPort: 111
         securityContext:
           privileged: true
+        env:
+        - name:  NFS_EXPORT_1
+          value: '/exports  *(rw,sync,no_subtree_check,fsid=100)'
         volumeMounts:
         - name: storage
           mountPath: /exports
       volumes:
       - name: storage
         hostPath:
-          path: /mnt # store all data in "/data/nfs" directory of the node where it is running
-          type: DirectoryOrCreate # if the directroy does not exist then create it
+          path: /mnt
+          type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: Service
