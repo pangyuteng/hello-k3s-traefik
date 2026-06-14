@@ -14,6 +14,11 @@ kubectl -n kube-system get pod -o wide -l app=csi-nfs-node
 kubectl create -f https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/deploy/example/nfs-provisioner/nginx-pod.yaml
 
 
+deleting pvc getting stuck.
+
+https://stackoverflow.com/questions/55672498/kubernetes-cluster-stuck-on-removing-pv-pvc
+
+
 --
 
 # OLD
