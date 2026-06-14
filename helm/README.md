@@ -5,10 +5,6 @@
 https://helm.sh/docs/intro/install/#from-script
 
 
-+ create namespace
-
-kubectl create namespace foo-test
-kubectl create namespace foo-prod
 
 
 https://github.com/helm/charts-repo-actions-demo/tree/main/charts
@@ -22,4 +18,7 @@ https://helm.sh/docs/v2/developing_charts/#the-chartyaml-file
 
 
 helm install test-name -f foo/values-test.yaml ./foo
+helm upgrade test-name -f foo/values-test.yaml ./foo
 
+
+helm install prod-name -f foo/values-prod.yaml ./foo

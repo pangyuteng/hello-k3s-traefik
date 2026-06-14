@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: httpbin
-  namespace: {{.Value.metadata.namespace}}
+  namespace: {{.Values.metadata.namespace}}
 spec:
-  replicas: {{.Value.spec.replicas | default 1}}
+  replicas: {{.Values.spec.replicas | default 1}}
   selector:
     matchLabels:
       app: httpbin
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: httpbin
-          image: {{.Value.image}}
+          image: {{.Values.image}}
           imagePullPolicy: Always
           ports:
             - containerPort: 80

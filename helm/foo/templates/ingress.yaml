@@ -2,14 +2,14 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: httpbin
-  namespace: {{.Value.metadata.namespace}}
+  namespace: {{.Values.metadata.namespace}}
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
 spec:
   rules:
   - http:
       paths:
-      - path: {{.Value.ingress.path}}
+      - path: {{.Values.ingress.path}}
         pathType: Prefix
         backend:
           service:
