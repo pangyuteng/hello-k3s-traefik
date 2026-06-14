@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpbin
+  namespace: {{.Value.metadata.namespace}}
+spec:
+  replicas: {{.Value.spec.replicas | default 1}}
+  selector:
+    matchLabels:
+      app: httpbin
+  template:
+    metadata:
+      labels:
+        app: httpbin
+    spec:
+      containers:
+        - name: httpbin
+          image: kennethreitz/httpbin:latest
+          imagePullPolicy: Always
+          #imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80

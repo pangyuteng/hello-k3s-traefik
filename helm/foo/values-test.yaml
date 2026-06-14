@@ -1,0 +1,4 @@
+metadata:
+  namespace: httpbin-test
+spec:
+  replicas: 1

@@ -1,0 +1,14 @@
+# https://helm.sh/docs/v2/developing_charts/#the-chartyaml-file
+apiVersion: v1
+
+name: foo
+version: 0.1.0
+appVersion: "3.9"
+description: Deploy a basic Alpine Linux pod
+home: https://helm.sh/helm
+maintainers:
+  - email: email@example.com
+    name: Name
+
+sources:
+  - http://github.com/pangyuteng/hello-k3s-traefik
