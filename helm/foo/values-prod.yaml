@@ -2,3 +2,5 @@ metadata:
   namespace: httpbin-prod
 spec:
   replicas: 3
+ingress:
+  path: /test
