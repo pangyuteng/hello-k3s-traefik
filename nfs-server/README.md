@@ -19,6 +19,14 @@ deleting pvc getting stuck.
 https://stackoverflow.com/questions/55672498/kubernetes-cluster-stuck-on-removing-pv-pvc
 
 
+kubectl patch pvc <pvc_name> -p '{"metadata":{"finalizers":null}}'
+kubectl delete pvc <pvc_name> --grace-period=0 --force 
+kubectl patch pv <pv_name> -p '{"metadata":{"finalizers":null}}'
+kubectl delete pv <pv_name> --grace-period=0 --force 
+
+kubectl delete pods nginx-nfs-example --grace-period=0 --force
+
+
 --
 
 # OLD
